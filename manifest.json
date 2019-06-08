@@ -4,14 +4,14 @@
   "description": "A must-have DevTool that searches GitHub from your very own Chrome menu",
   "version": "1.0.2",
   "icons": {
-    "128": "icon128.png",
-    "48": "icon48.png",
-    "16": "icon16.png"
+    "128": "icons/icon128.png",
+    "48":  "icons/icon48.png",
+    "16":  "icons/icon16.png"
   },
   "default_locale": "en",
   "browser_action": {
     "default_icon": "icons/icon16.png",
     "default_title": "Search GitHub",
     "default_popup": "index.html"
-  },
+  }
 }
