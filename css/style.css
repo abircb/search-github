@@ -2,11 +2,12 @@
     background-color: #24292e;
     margin: 0;
     padding: 0;
-    width: 400px;
+    width: 80%;
+    font-family: 'Roboto', sans-serif;
   }
 
-  .search-bar-container {
-    width: 250px;
+  .main-popup {
+    width: 500px;
   }
 
   .icon-container {
@@ -17,9 +18,40 @@
 
   .fa-github {
     color: #FFFFFF;
-    padding: 19px 19px 19px 19px;
+    padding: 23%;
   }
 
   .fa-github:hover {
-    color: #d5dfef;
+    color: #b3bccc;
+  }
+
+  .search-bar-container {
+    text-align: center;
+    display: inline-block;
+    margin: 2.8% auto;
+  }
+
+  input[type=text] {
+    width: 300px;
+    background-color: #353d44;
+    border: none;
+    float: left;
+    padding: 2.8%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    -webkit-transition: width 0.2s ease-in-out;
+    transition: width 0.2s ease-in-out;
+  }
+
+  input[type=text]:focus {
+    width: 400px;
+    background-color: #FFFFFF;
+    color: #000000;
+    outline: none;
+    padding: 2%;
+  }
+
+  input[type=text]::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
   }
