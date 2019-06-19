@@ -1,4 +1,10 @@
+  $(document).ready(function() {
+      displaySearchHistory();
+  });
+
   var input = document.getElementById("searchKey");
+  var previousSearches = [];
+
   if(input) {
     input.addEventListener("keydown", function (e) {
         if (e.keyCode === 13) {
@@ -9,6 +15,7 @@
 
   function basicSearch(e) {
     let searchKey = document.getElementById("searchKey").value;
+    storeSearches(searchKey)
     searchKey = (searchKey.toString().toLowerCase()).trim();
     var searchURL = 'https://github.com/search?q=' + searchKey;
     var createProperties = {
@@ -17,8 +24,19 @@
     chrome.tabs.create(createProperties, function(){});
   }
 
-  /*function storeSearches() {
-    if(typeof(Storage) != "undefined") {
-
+  function displaySearchHistory() {
+    if(localStorage["previousSearches"]) {
+     previousSearches = JSON.parse(localStorage["previousSearches"]);
     }
-  }*/
+    $("#searchKey").autocomplete({source: previousSearches})
+  }
+
+  function storeSearches(search) {
+    if(previousSearches.indexOf(search) == -1) {
+     previousSearches.unshift(search);
+     if(previousSearches.length > 5) {
+        previousSearches.pop();
+     }
+     localStorage["previousSearches"] = JSON.stringify(previousSearches);
+   }
+  }
