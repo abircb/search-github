@@ -28,13 +28,18 @@
     if(localStorage["previousSearches"]) {
      previousSearches = JSON.parse(localStorage["previousSearches"]);
     }
-    $("#searchKey").autocomplete({source: previousSearches})
+    $("#searchKey").autocomplete({
+      source: previousSearches,
+      messages: {
+        noResults: '',
+      }
+    })
   }
 
   function storeSearches(search) {
     if(previousSearches.indexOf(search) == -1) {
      previousSearches.unshift(search);
-     if(previousSearches.length > 5) {
+     if(previousSearches.length > 100) {
         previousSearches.pop();
      }
      localStorage["previousSearches"] = JSON.stringify(previousSearches);
