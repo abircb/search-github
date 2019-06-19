@@ -2,14 +2,14 @@
       displaySearchHistory();
   });
 
-  var input = document.getElementById("searchKey");
   var previousSearches = [];
+  var input = document.getElementById("searchKey");
 
   if(input) {
     input.addEventListener("keydown", function (e) {
-        if (e.keyCode === 13) {
-            basicSearch(e);
-        }
+      if (e.keyCode === 13) {
+        basicSearch(e);
+      }
     });
   }
 
@@ -26,22 +26,20 @@
 
   function displaySearchHistory() {
     if(localStorage["previousSearches"]) {
-     previousSearches = JSON.parse(localStorage["previousSearches"]);
+      previousSearches = JSON.parse(localStorage["previousSearches"]);
     }
     $("#searchKey").autocomplete({
       source: previousSearches,
       messages: {
-        noResults: '',
+        noResults: ''
       }
     })
   }
 
   function storeSearches(search) {
     if(previousSearches.indexOf(search) == -1) {
-     previousSearches.unshift(search);
-     if(previousSearches.length > 100) {
-        previousSearches.pop();
-     }
-     localStorage["previousSearches"] = JSON.stringify(previousSearches);
-   }
+      previousSearches.unshift(search);
+      if(previousSearches.length > 100) {previousSearches.pop();}
+      localStorage["previousSearches"] = JSON.stringify(previousSearches);
+    }
   }
