@@ -16,3 +16,9 @@
     };
     chrome.tabs.create(createProperties, function(){});
   }
+
+  /*function storeSearches() {
+    if(typeof(Storage) != "undefined") {
+
+    }
+  }*/
