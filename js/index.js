@@ -39,7 +39,9 @@
   function storeSearches(search) {
     if(previousSearches.indexOf(search) == -1) {
       previousSearches.unshift(search);
-      if(previousSearches.length > 100) {previousSearches.pop();}
+      if(previousSearches.length > 100) {
+        previousSearches.pop();
+      }
       localStorage["previousSearches"] = JSON.stringify(previousSearches);
     }
   }

@@ -55,12 +55,3 @@
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
   }
-
-  .advanced {
-    float: right;
-    font-family: inherit;
-    font-size: 14px;
-    padding: 6% 10% 0% 1%;
-    color: #FFFFFF;
-    text-decoration: underline;
-  }
