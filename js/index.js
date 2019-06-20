@@ -33,7 +33,7 @@
       messages: {
         noResults: ''
       }
-    })
+    });
   }
 
   function storeSearches(search) {
