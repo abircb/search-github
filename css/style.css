@@ -6,6 +6,14 @@
     font-family: 'Roboto', sans-serif;
   }
 
+  a,
+  a:active,
+  a:hover,
+  a:visited {
+    color: #FFFFFF;
+    font-family: inherit;
+  }
+
   .main-popup {
     width: 500px;
   }
