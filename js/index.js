@@ -29,7 +29,7 @@
       previousSearches = JSON.parse(localStorage["previousSearches"]);
     }
     else {
-      previousSearches = ['octokit/rest.js', 'atom', 'search-github-crx', 'atom/github', 'antirez/github']
+      previousSearches = ['octokit/rest.js', 'atom', 'search-github-crx', 'antirez/redis']
     }
 
     $("#searchKey").autocomplete({
