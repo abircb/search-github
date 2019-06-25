@@ -44,7 +44,7 @@
   .search-bar-container {
     text-align: center;
     display: inline-block;
-    margin: 2.8% auto 22% auto;
+    margin: 2.8% auto auto auto;
   }
 
   input[type=text] {
@@ -112,14 +112,14 @@
 
   .advanced {
     float: right;
-    margin: auto;
     width: 80px;
     bottom: 20px;
-    margin: 29px -11px 7px;
+    margin: 2.6% 0.2% 0.4% auto;
     font-size: 14px;
     font-family: inherit;
     text-decoration: underline;
     color: #FFFFFF;
+    line-height: 22px;
   }
 
   .advanced-search {
