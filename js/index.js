@@ -33,10 +33,14 @@
     }
 
     $("#searchKey").autocomplete({
-      source: previousSearches,
+      source: function(request, response) {
+        var results = $.ui.autocomplete.filter(previousSearches, request.term);
+        response(results.slice(0, 5));
+      },
       messages: {
         noResults: ''
-      }
+      },
+      maxShowItems: 5
     });
   }
 

@@ -8,7 +8,6 @@
 
   a,
   a:active,
-  a:hover,
   a:visited {
     color: #FFFFFF;
     font-family: inherit;
@@ -16,6 +15,7 @@
 
   .main-popup {
     width: 500px;
+    -webkit-animation: fadein 0.7s;
   }
 
   .icon-container {
@@ -29,8 +29,16 @@
     padding: 23%;
   }
 
-  .fa-github:hover {
+  .fa-arrow-left {
+    color: #FFFFFF;
+    padding: 23%;
+  }
+
+  .fa-github:hover,
+  .fa-arrow-left:hover,
+   a:hover {
     color: #b3bccc;
+    transition: color 0.2s ease-in;
   }
 
   .search-bar-container {
@@ -47,8 +55,7 @@
     padding: 2.8%;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
-    -webkit-transition: width 0.2s ease-in-out;
-    transition: width 0.2s ease-in-out;
+    -webkit-transition: width 0.35s ease-in-out;
   }
 
   input[type=text]:focus {
@@ -57,6 +64,7 @@
     color: #000000;
     outline: none;
     padding: 1.8%;
+    -webkit-transition: width 0.35s ease-in-out;
   }
 
   input[type=text]::placeholder {
@@ -107,11 +115,45 @@
     margin: auto;
     width: 80px;
     bottom: 20px;
-    margin-top: 29px;
-    margin-right: -11px;
-    margin-bottom: 7px;
+    margin: 29px -11px 7px;
     font-size: 14px;
     font-family: inherit;
     text-decoration: underline;
     color: #FFFFFF;
+  }
+
+  .advanced-search {
+    width: 500px;
+    -webkit-animation: fadein 0.7s;
+  }
+
+  .sidebar {
+    width: auto;
+    float: left;
+    margin: 4% 7% auto 2%;
+  }
+
+  .advanced-search h2 {
+    font-size: 20px;
+    float: left;
+    text-align: left;
+    font-family: inherit;
+    color: #FFFFFF;
+  }
+
+  .advanced-search p {
+    font-size: 15px;
+    float: left;
+    text-align: left;
+    font-family: inherit;
+    color: #FFFFFF;
+  }
+
+  @-webkit-keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
   }
