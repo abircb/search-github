@@ -29,7 +29,7 @@
       previousSearches = JSON.parse(localStorage["previousSearches"]);
     }
     else {
-      previousSearches = ['octokit/rest.js', 'atom', 'search-github-crx', 'antirez/redis']
+      previousSearches = ['octokit/rest.js', 'atom', 'search-github-crx', 'antirez/redis', 'electron'];
     }
 
     $("#searchKey").autocomplete({
@@ -39,8 +39,7 @@
       },
       messages: {
         noResults: ''
-      },
-      maxShowItems: 5
+      }
     });
   }
 
