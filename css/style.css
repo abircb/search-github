@@ -13,6 +13,24 @@
     font-family: inherit;
   }
 
+  button#advanced_btn {
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    color: #000000;
+    padding: 2% 4% 2% 4%;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+  }
+
+  button#advanced_btn:hover,
+  button#advanced_btn:focus {
+    background-color: #b3bccc;
+    outline: none
+  }
+
   .main-popup {
     width: 500px;
     -webkit-animation: fadein 0.7s;
@@ -143,7 +161,8 @@
     line-height: 22px;
   }
 
-  .advanced-search {
+  .advanced-search-area,
+  .table {
     width: 500px;
     -webkit-animation: fadein 0.7s;
   }
@@ -154,17 +173,19 @@
     margin: 4% 7% auto 2%;
   }
 
-  .advanced-search h2 {
+  .advanced-search-area h2 {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     color: #FFFFFF;
     padding-left: 8%;
   }
 
-  .advanced-search p {
+  .advanced-search-area p,
+  table tbody tr td {
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
     color: #FFFFFF;
+    padding-top: 4%;
     padding-left: 8%;
   }
 
@@ -176,4 +197,19 @@
     to {
       opacity: 1;
     }
+  }
+
+  .table {
+    padding-left: 3%;
+  }
+
+  table {
+    width: 80%;
+    border: none;
+    cellpadding: 0px;
+    cellspacing: 200px;
+  }
+
+  table tbody tr td {
+    width: 50%;
   }
