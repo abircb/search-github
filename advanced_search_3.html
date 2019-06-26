@@ -12,52 +12,60 @@
   </div>
   <div class="advanced-search-area">
     <br><br>
-    <h2>Code options<br>
+    <h2>Issues options<br>
     </h2>
   </div>
   <div class="table">
     <table>
       <tbody>
         <tr>
-          <td>With this extension</td>
+          <td>In this state</td>
           <td>
-            <form autocomplete="off">
-              <input id="extension" value="" type="text" placeholder="rb, py, jpg" />
-            </form>
-          </td>
-        </tr>
-        <tr>
-          <td>Of this file size</td>
-          <td>
-            <form autocomplete="off">
-              <input id="size" value="" type="text" placeholder="100..8000, >10000" />
-            </form>
-          </td>
-        </tr>
-        <tr>
-          <td>In this path</td>
-          <td>
-            <form autocomplete="off">
-              <input id="path" value="" type="text" placeholder="/foo/bar/baz/qux" />
-            </form>
-          </td>
-        </tr>
-        <tr>
-          <td>With this file name</td>
-          <td>
-            <form autocomplete="off">
-              <input id="filename" value="" type="text" placeholder="app.rb, footer.erb" />
-            </form>
-          </td>
-        </tr>
-        <tr>
-          <td>Return repositories including forks</td>
-          <td>
-            <select name="fork">
-              <option selected>No</option>
-              <option>Yes</option>
-              <option>Only including forks</option>
+            <select name="state">
+              <option selected>open/closed</option>
+              <option>open</option>
+              <option>closed</option>
             </select>
+          </td>
+        </tr>
+        <tr>
+          <td>With this many commments</td>
+          <td>
+            <form autocomplete="off">
+              <input id="commments" value="" type="text" placeholder="0..100, >442" />
+            </form>
+          </td>
+        </tr>
+        <tr>
+          <td>With the labels</td>
+          <td>
+            <form autocomplete="off">
+              <input id="label" value="" type="text" placeholder="bug, ie6" />
+            </form>
+          </td>
+        </tr>
+        <tr>
+          <td>Opened by the author</td>
+          <td>
+            <form autocomplete="off">
+              <input id="author" value="" type="text" placeholder="hubot, octocat" />
+            </form>
+          </td>
+        </tr>
+        <tr>
+          <td>Mentioning the users</td>
+          <td>
+            <form autocomplete="off">
+              <input id="mentions" value="" type="text" placeholder="abircb, tpope, mattt" />
+            </form>
+          </td>
+        </tr>
+        <tr>
+          <td>Assigned to the users</td>
+          <td>
+            <form autocomplete="off">
+              <input id="mentions" value="" type="text" placeholder="abircb, twp, jim" />
+            </form>
           </td>
         </tr>
       </tbody>
@@ -66,8 +74,8 @@
   <br><br>
   <div class="pagination">
     <a href="advanced_search_1.html">1</a>
-    <a href="advanced_search_2.html" class="active">2</a>
-    <a href="advanced_search_3.html">3</a>
+    <a href="advanced_search_2.html">2</a>
+    <a href="advanced_search_3.html" class="active">3</a>
     <a href="advanced_search_4.html">4</a>
   </div>
 </body>
