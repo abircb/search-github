@@ -1,12 +1,12 @@
   $(document).ready(function() {
-      displaySearchHistory();
+    displaySearchHistory();
   });
 
   var previousSearches = [];
   var input = document.getElementById("searchKey");
 
-  if(input) {
-    input.addEventListener("keydown", function (e) {
+  if (input) {
+    input.addEventListener("keydown", function(e) {
       if (e.keyCode === 13) {
         basicSearch(e);
       }
@@ -21,14 +21,13 @@
     var createProperties = {
       "url": searchURL
     };
-    chrome.tabs.create(createProperties, function(){});
+    chrome.tabs.create(createProperties, function() {});
   }
 
   function displaySearchHistory() {
-    if(localStorage["previousSearches"]) {
+    if (localStorage["previousSearches"]) {
       previousSearches = JSON.parse(localStorage["previousSearches"]);
-    }
-    else {
+    } else {
       previousSearches = ['octokit/rest.js', 'atom', 'search-github-crx', 'antirez/redis', 'electron'];
     }
 
@@ -44,9 +43,9 @@
   }
 
   function storeSearches(search) {
-    if(previousSearches.indexOf(search) == -1) {
+    if (previousSearches.indexOf(search) == -1) {
       previousSearches.unshift(search);
-      if(previousSearches.length > 100) {
+      if (previousSearches.length > 100) {
         previousSearches.pop();
       }
       localStorage["previousSearches"] = JSON.stringify(previousSearches);
