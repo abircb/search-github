@@ -70,12 +70,32 @@
     background-color: #353d44;
     border: none;
     float: left;
-    padding: 2.8%;
+    padding: 2.2%;
     font-family: 'Roboto', sans-serif;
-    font-size: 11px;
+    font-size: 14px;
   }
 
   input[type=text]:focus {
+    background-color: #FFFFFF;
+    outline: none;
+  }
+
+  input[type=text]::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+  }
+
+  input[type=text]#advanced_search {
+    width: 300px;
+    background-color: #353d44;
+    border: none;
+    float: left;
+    padding: 2.2%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+  }
+
+  input[type=text]#advanced_search:focus {
     background-color: #FFFFFF;
     outline: none;
   }
@@ -98,11 +118,6 @@
     outline: none;
     padding: 1.8%;
     -webkit-transition: width 0.35s ease-in-out;
-  }
-
-  input[type=text]::placeholder {
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
   }
 
   .ui-autocomplete {
@@ -163,7 +178,7 @@
 
   .advanced-search-area,
   .table {
-    width: 500px;
+    width: 600px;
     -webkit-animation: fadein 0.7s;
   }
 
@@ -180,8 +195,7 @@
     padding-left: 8%;
   }
 
-  .advanced-search-area p,
-  table tbody tr td {
+  .advanced-search-area p {
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
     color: #FFFFFF;
@@ -207,9 +221,27 @@
     width: 80%;
     border: none;
     cellpadding: 0px;
-    cellspacing: 200px;
+    display: inline-block;
   }
 
   table tbody tr td {
     width: 50%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #FFFFFF;
+    padding-left: 8%;
+    padding-top: 2%;
+  }
+
+  select {
+    background-color: #FFFFFF;
+    color: #000000;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 30px;
+  }
+
+  select:focus {
+    outline: none;
   }

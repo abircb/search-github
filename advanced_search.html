@@ -13,8 +13,8 @@
     <div class="advanced-search-area">
       <br><br>
       <h2>Advanced Search <br><br>
-        <form autocomplete="on">
-          <input id="advanced_search" value="" type="text" placeholder="" autocomplete="off" />
+        <form autocomplete="off">
+          <input id="advanced_search" value="" type="text" placeholder="" />
           &nbsp &nbsp
           <button id="advanced_btn" type="submit">Search</button>
         </form>
@@ -22,15 +22,76 @@
     </div>
     <div class="table">
       <table>
-        <tr>
-          <td>Search for</td>
-          <td>
-            <select>
-              <option value="">test</option>
-            </select>
-          </td>
-        </tr>
+        <tbody>
+          <tr>
+            <td width="50%">Search for</td>
+            <td width="50%">
+              <select name="search_type">
+                <option selected>Repositories</option>
+                <option>Code</option>
+                <option>Commits</option>
+                <option>Issues</option>
+                <option>Packages</option>
+                <option>Marketplace</option>
+                <option>Topics</option>
+                <option>Wikis</option>
+                <option>Users</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>From these owners</td>
+            <td>
+              <form autocomplete="off">
+                <input id="user" value="" type="text" placeholder="github, atom, electron, octokit" />
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>In these repositories</td>
+            <td>
+              <form autocomplete="off">
+                <input id="repo" value="" type="text" placeholder="twbs/bootsrap, rails/rails" />
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>With this many stars</td>
+            <td>
+              <form autocomplete="off">
+                <input id="stars" value="" type="text" placeholder="0..100, 200, >1000" />
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>With this many forks</td>
+            <td>
+              <form autocomplete="off">
+                <input id="forks" value="" type="text" placeholder="50..100, 200, <5" />
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>Of this size</td>
+            <td>
+              <form autocomplete="off">
+                <input id="size" value="" type="text" placeholder="Repository size in KB" />
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td width="50%">Return repositories including forks</td>
+            <td width="50%">
+              <select name="search_type">
+                <option selected>No</option>
+                <option>Yes</option>
+                <option>Only including forks</option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
       </table>
+      <br><br>
     </div>
   </body>
 
