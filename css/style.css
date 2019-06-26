@@ -54,11 +54,26 @@
     float: left;
     padding: 2.8%;
     font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+  }
+
+  input[type=text]:focus {
+    background-color: #FFFFFF;
+    outline: none;
+  }
+
+  input[type=text]#searchKey {
+    width: 300px;
+    background-color: #353d44;
+    border: none;
+    float: left;
+    padding: 2.8%;
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     -webkit-transition: width 0.35s ease-in-out;
   }
 
-  input[type=text]:focus {
+  input[type=text]:focus#searchKey {
     width: 400px;
     background-color: #FFFFFF;
     color: #000000;
@@ -114,7 +129,7 @@
     float: right;
     width: 80px;
     bottom: 20px;
-    margin: 2.6% 0.2% 0.4% auto;
+    margin: 2.6% 0.2% 1.2% 1%;
     font-size: 14px;
     font-family: inherit;
     text-decoration: underline;
@@ -127,26 +142,24 @@
     -webkit-animation: fadein 0.7s;
   }
 
-  .sidebar {
+  .back-btn {
     width: auto;
     float: left;
     margin: 4% 7% auto 2%;
   }
 
   .advanced-search h2 {
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
-    float: left;
-    text-align: left;
-    font-family: inherit;
     color: #FFFFFF;
+    padding-left: 8%;
   }
 
   .advanced-search p {
+    font-family: 'Roboto', sans-serif;
     font-size: 15px;
-    float: left;
-    text-align: left;
-    font-family: inherit;
     color: #FFFFFF;
+    padding-left: 8%;
   }
 
   @-webkit-keyframes fadein {
