@@ -1,0 +1,105 @@
+  <!DOCTYPE html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <section id="page_1">
+      <div class="back-btn">
+        <a href="/index.html"><i class="fas fa-arrow-left fa-2x"></i></a>
+      </div>
+      <div class="advanced-search-area">
+        <br><br>
+        <h2>Advanced Search <br><br>
+          <form autocomplete="off">
+            <input id="advanced_search" value="" type="text" placeholder="" />
+            &nbsp &nbsp
+            <button id="advanced_btn" type="submit">Search</button>
+          </form>
+        </h2>
+      </div>
+      <div class="table">
+        <table>
+          <tbody>
+            <tr>
+              <td width="50%">Search for</td>
+              <td width="50%">
+                <select name="search_type">
+                  <option selected>Repositories</option>
+                  <option>Code</option>
+                  <option>Commits</option>
+                  <option>Issues</option>
+                  <option>Packages</option>
+                  <option>Marketplace</option>
+                  <option>Topics</option>
+                  <option>Wikis</option>
+                  <option>Users</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>From these owners</td>
+              <td>
+                <form autocomplete="off">
+                  <input id="user" value="" type="text" placeholder="github, atom, electron, octokit" />
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td>In these repositories</td>
+              <td>
+                <form autocomplete="off">
+                  <input id="repo" value="" type="text" placeholder="twbs/bootsrap, rails/rails" />
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td>With this many stars</td>
+              <td>
+                <form autocomplete="off">
+                  <input id="stars" value="" type="text" placeholder="0..100, 200, >1000" />
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td>With this many forks</td>
+              <td>
+                <form autocomplete="off">
+                  <input id="forks" value="" type="text" placeholder="50..100, 200, <5" />
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td>Of this size</td>
+              <td>
+                <form autocomplete="off">
+                  <input id="size" value="" type="text" placeholder="Repository size in KB" />
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td width="50%">Return repositories including forks</td>
+              <td width="50%">
+                <select name="search_type">
+                  <option selected>No</option>
+                  <option>Yes</option>
+                  <option>Only including forks</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br><br>
+      <div class="pagination">
+        <a href="advanced_search_1.html" class="active">1</a>
+        <a href="advanced_search_2.html">2</a>
+        <a href="advanced_search_3.html">3</a>
+      </div>
+    </section>
+  </body>
+
+  </html>

@@ -177,7 +177,8 @@
   }
 
   .advanced-search-area,
-  .table {
+  .table,
+  .pagination {
     width: 600px;
     -webkit-animation: fadein 0.7s;
   }
@@ -244,4 +245,26 @@
 
   select:focus {
     outline: none;
+  }
+
+  .pagination {
+    margin-left: 80%;
+  }
+
+  .pagination a.active {
+    background-color: #b3bccc;
+  }
+
+  .pagination a {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+  }
+
+  .pagination a:hover:not(.active) {
+    background-color: #b3bccc;
   }
