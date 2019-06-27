@@ -3,10 +3,10 @@
   });
 
   var previousSearches = [];
-  var input = document.getElementById("searchKey");
+  var basicSearch_input = document.getElementById("searchKey");
 
-  if (input) {
-    input.addEventListener("keydown", function(e) {
+  if (basicSearch_input) {
+    basicSearch_input.addEventListener("keydown", function(e) {
       if (e.keyCode === 13) {
         basicSearch(e);
       }
@@ -17,8 +17,31 @@
     let searchKey = document.getElementById("searchKey").value;
     storeSearches(searchKey)
     searchKey = (searchKey.toString().toLowerCase()).trim();
-    var searchURL = 'https://github.com/search?q=' + searchKey;
-    var createProperties = {
+    let searchURL = 'https://github.com/search?q=' + searchKey;
+    let createProperties = {
+      "url": searchURL
+    };
+    chrome.tabs.create(createProperties, function() {});
+  }
+
+  var searchBtn = document.getElementById("advanced_btn");
+  if (searchBtn) {
+    searchBtn.addEventListener('click', function() {
+      advancedSearch();
+    });
+  }
+
+  function advancedSearch() {
+    let searchKey = document.getElementById("advanced_search").value;
+    let searchType = document.getElementById("search_type").value
+    if (searchKey) {
+      searchKey = (searchKey.toString().toLowerCase()).trim();
+    }
+    if (searchType == 'Packages') {
+      searchType = 'RegistryPackages';
+    }
+    let searchURL = 'https://github.com/search?utf8=%E2%9C%93&q=' + searchKey + '&type=' + searchType + '&ref=advsearch&l=&l=';
+    let createProperties = {
       "url": searchURL
     };
     chrome.tabs.create(createProperties, function() {});
