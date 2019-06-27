@@ -55,7 +55,7 @@
 
   function getParameters() {
     let param = '';
-    param += repoParameters() + codeParameters() + issueParameters() + userParameters() // + wikiParameter();
+    param += repoParameters() + codeParameters() + issueParameters() + userParameters() + wikiParameter();
     return param;
   }
 
@@ -157,6 +157,17 @@
     }
 
     return userParameters;
+  }
+
+  function wikiParameter() {
+    let wikiParameter = '';
+    let updated = document.getElementById("updated").value;
+
+    if(!(isEmpty(updated))) {
+      wikiParameter += parse('+updated%3A', updated);
+    }
+
+    return wikiParameter;
   }
 
   function isEmpty(str) {
