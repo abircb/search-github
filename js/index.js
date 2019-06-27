@@ -50,7 +50,7 @@
 
   function getParameters() {
     let param = '';
-    param += repoParams(); // + codeParams() + issueParams() + userParams() + wikiParams();
+    param += repoParams() + codeParams() + issueParams(); + userParams() + wikiParam();
     return param;
   }
 
@@ -89,7 +89,6 @@
     let stars = document.getElementById("stars").value;
     let forks = document.getElementById("forks").value;
     let size = document.getElementById("repo_size").value;
-    let fork = filterForkOption(document.getElementById("repo_fork").value);
 
     if (!(isEmpty(users))) {
       repoParams += '+user%3A' + users;
@@ -107,12 +106,67 @@
       repoParams += '+size%3A' + size;
     }
 
-    return repoParams + fork;
+    return repoParams;
+  }
 
+  function codeParams() {
+    let codeParams = '';
+    let extension = document.getElementById("extension").value;
+    let size = document.getElementById("code_size").value;
+    let path = document.getElementById("path").value;
+    let filename = document.getElementById("filename").value;
+
+    if (!(isEmpty(extension))) {
+      codeParams += '+extension%3A' + extension;
+    }
+    if (!(isEmpty(size))) {
+      codeParams += '+size%3A' + size;
+    }
+    if (!(isEmpty(path))) {
+      codeParams += '+path%3A' + path;
+    }
+    if (!(isEmpty(filename))) {
+      codeParams += '+filename%3A' + filename;
+    }
+
+    return codeParams;
+  }
+
+  function issueParams() {
+    let issueParams = '';
+    let comments = document.getElementById("comments").value;
+    let label = document.getElementById("label").value;
+    let author = document.getElementById("author").value;
+    let mentions = document.getElementById("mentions").value;
+    let assignee = document.getElementById("assignee").value;
+
+    if (!(isEmpty(comments))) {
+      issueParams += '+comments%3A' + extension;
+    }
+    if (!(isEmpty(label))) {
+      issueParams += '+label%3A' + size;
+    }
+    if (!(isEmpty(author))) {
+      issueParams += '+author%3A' + path;
+    }
+    if (!(isEmpty(mention))) {
+      issueParams += '+mentions%3A' + filename;
+    }
+    if (!(isEmpty(assignee))) {
+      issueParams += '+assignee%3A' + filename;
+    }
+
+    return issueParams;
   }
 
   function isEmpty(str) {
     return (str == null || (str.toString().trim()).length == 0);
+  }
+
+  function getForkOptions() {
+    let repo_fork = filterForkOption(document.getElementById("repo_fork").value);
+    let code_fork = filterForkOption(document.getElementById("code_fork").value);
+    let state = filterState(document.getElementById("state").value);
   }
 
   function filterForkOption(str) {
@@ -120,6 +174,16 @@
       return '+fork%3Atrue'
     } else if (str == 'Only including forks') {
       return '+fork%3Aonly'
+    } else {
+      return '';
+    }
+  }
+
+  function filterState(str) {
+    if (str == 'open') {
+      return '+state%3Aopen'
+    } else if (str == 'closed') {
+      return '+state%3Aclosed'
     } else {
       return '';
     }
