@@ -164,7 +164,7 @@
     let wikiParameter = '';
     let updated = document.getElementById("updated").value;
 
-    if(!(isEmpty(updated))) {
+    if (!(isEmpty(updated))) {
       wikiParameter += parse('+updated%3A', updated);
     }
 
@@ -233,7 +233,7 @@
   function parse(param, str) {
     if (str.includes(',')) {
       let parsedSearch = '';
-      var keywords = str.split(',');
+      let keywords = str.split(',');
       i = 0;
       while (i < keywords.length) {
         parsedSearch += param + (keywords[i].trim());
