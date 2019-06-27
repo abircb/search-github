@@ -68,19 +68,19 @@
     let size = document.getElementById("repo_size").value;
 
     if (!(isEmpty(users))) {
-      repoParams += parse(users, '+user%3A')
+      repoParams += parse('+user%3A', users);
     }
     if (!(isEmpty(repo))) {
-      repoParams += '+repo%3A' + repo;
+      repoParams += parse('+repo%3A', repo);
     }
     if (!(isEmpty(stars))) {
-      repoParams += '+stars%3A' + stars;
+      repoParams += parse('+stars%3A', stars);
     }
     if (!(isEmpty(forks))) {
-      repoParams += '+forks%3A' + forks;
+      repoParams += parse('+forks%3A', forks);
     }
     if (!(isEmpty(size))) {
-      repoParams += '+size%3A' + size;
+      repoParams += parse('+size%3A', forks);
     }
 
     return repoParams;
@@ -94,16 +94,16 @@
     let filename = document.getElementById("filename").value;
 
     if (!(isEmpty(extension))) {
-      codeParams += '+extension%3A' + extension;
+      codeParams += parse('+extension%3A', extension);
     }
     if (!(isEmpty(size))) {
-      codeParams += '+size%3A' + size;
+      codeParams += parse('+size%3A', extension);
     }
     if (!(isEmpty(path))) {
-      codeParams += '+path%3A' + path;
+      codeParams += parse('+path%3A', extension);
     }
     if (!(isEmpty(filename))) {
-      codeParams += '+filename%3A' + filename;
+      codeParams += parse('+filename%3A', extension);
     }
 
     return codeParams;
@@ -118,19 +118,19 @@
     let assignee = document.getElementById("assignee").value;
 
     if (!(isEmpty(comments))) {
-      issueParams += '+comments%3A' + extension;
+      issueParams += parse('+comments%3A', extension);
     }
     if (!(isEmpty(label))) {
-      issueParams += '+label%3A' + size;
+      issueParams += parse('+label%3A', extension);
     }
     if (!(isEmpty(author))) {
-      issueParams += '+author%3A' + path;
+      issueParams += parse('+author%3A', extension);
     }
     if (!(isEmpty(mentions))) {
-      issueParams += '+mentions%3A' + filename;
+      issueParams += parse('+mentions%3A', extension);
     }
     if (!(isEmpty(assignee))) {
-      issueParams += '+assignee%3A' + filename;
+      issueParams += parse('+assignee%3A', extension);
     }
 
     return issueParams;
@@ -144,6 +144,7 @@
     let repo_fork = filterForkOption(document.getElementById("repo_fork").value);
     let code_fork = filterForkOption(document.getElementById("code_fork").value);
     let state = filterState(document.getElementById("state").value);
+    return repo_fork + code_fork + state;
   }
 
   function filterForkOption(str) {
@@ -194,16 +195,18 @@
     }
   }
 
-  function parse(str, param) {
-    result = str;
-    if(str.includes(',')) {
-      result = '';
+  function parse(param, str) {
+    if (str.includes(',')) {
+      let parsedSearch = '';
       var keywords = str.split(',');
       i = 0;
-      while(i < keywords.length) {
-        result += param + (keywords[i].trim());
+      while (i < keywords.length) {
+        parsedSearch += param + (keywords[i].trim());
         i += 1;
       }
+      return parsedSearch;
+    } else {
+      return param + str;
     }
-    return result;
+
   }
