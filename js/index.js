@@ -46,7 +46,8 @@
     }
 
     let searchParameters = getParameters();
-    let searchURL = 'https://github.com/search?utf8=%E2%9C%93&q=' + searchKey + searchParameters + '&type=' + searchType + '&ref=advsearch&l=&l=';
+    let fokeOptions = getForkOptions();
+    let searchURL = 'https://github.com/search?utf8=%E2%9C%93&q=' + searchKey + searchParameters + fokeOptions + '&type=' + searchType + '&ref=advsearch&l=&l=';
     let createProperties = {
       "url": searchURL
     };
