@@ -34,12 +34,17 @@
   function advancedSearch() {
     let searchKey = document.getElementById("advanced_search").value;
     let searchType = document.getElementById("search_type").value
+
     if (searchKey) {
       searchKey = searchKey.toString().trim();
+    } else {
+      searchKey = '';
     }
+
     if (searchType == 'Packages') {
       searchType = 'RegistryPackages';
     }
+
     let searchParameters = getParameters();
     let searchURL = 'https://github.com/search?utf8=%E2%9C%93&q=' + searchKey + searchParameters + '&type=' + searchType + '&ref=advsearch&l=&l=';
     let createProperties = {
@@ -50,7 +55,7 @@
 
   function getParameters() {
     let param = '';
-    param += repoParams() + codeParams() + issueParams(); + userParams() + wikiParam();
+    param += repoParams() + codeParams(); // + issueParams(); + userParams() + wikiParam();
     return param;
   }
 
@@ -63,7 +68,7 @@
     let size = document.getElementById("repo_size").value;
 
     if (!(isEmpty(users))) {
-      repoParams += '+user%3A' + users;
+      repoParams += parse(users, '+user%3A')
     }
     if (!(isEmpty(repo))) {
       repoParams += '+repo%3A' + repo;
@@ -106,7 +111,7 @@
 
   function issueParams() {
     let issueParams = '';
-    let comments = document.getElementById("comments").value;
+    let comments = document.getElementById("commments").value;
     let label = document.getElementById("label").value;
     let author = document.getElementById("author").value;
     let mentions = document.getElementById("mentions").value;
@@ -121,7 +126,7 @@
     if (!(isEmpty(author))) {
       issueParams += '+author%3A' + path;
     }
-    if (!(isEmpty(mention))) {
+    if (!(isEmpty(mentions))) {
       issueParams += '+mentions%3A' + filename;
     }
     if (!(isEmpty(assignee))) {
@@ -187,4 +192,18 @@
       }
       localStorage["previousSearches"] = JSON.stringify(previousSearches);
     }
+  }
+
+  function parse(str, param) {
+    result = str;
+    if(str.includes(',')) {
+      result = '';
+      var keywords = str.split(',');
+      i = 0;
+      while(i < keywords.length) {
+        result += param + (keywords[i].trim());
+        i += 1;
+      }
+    }
+    return result;
   }
