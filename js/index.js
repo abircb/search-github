@@ -55,12 +55,12 @@
 
   function getParameters() {
     let param = '';
-    param += repoParams() + codeParams(); // + issueParams(); + userParams() + wikiParam();
+    param += repoParameters() + codeParameters() + issueParameters() + userParameters() // + wikiParameter();
     return param;
   }
 
-  function repoParams() {
-    let repoParams = '';
+  function repoParameters() {
+    let repoParameters = '';
     let users = document.getElementById("user").value;
     let repo = document.getElementById("repo").value;
     let stars = document.getElementById("stars").value;
@@ -68,49 +68,49 @@
     let size = document.getElementById("repo_size").value;
 
     if (!(isEmpty(users))) {
-      repoParams += parse('+user%3A', users);
+      repoParameters += parse('+user%3A', users);
     }
     if (!(isEmpty(repo))) {
-      repoParams += parse('+repo%3A', repo);
+      repoParameters += parse('+repo%3A', repo);
     }
     if (!(isEmpty(stars))) {
-      repoParams += parse('+stars%3A', stars);
+      repoParameters += parse('+stars%3A', stars);
     }
     if (!(isEmpty(forks))) {
-      repoParams += parse('+forks%3A', forks);
+      repoParameters += parse('+forks%3A', forks);
     }
     if (!(isEmpty(size))) {
-      repoParams += parse('+size%3A', forks);
+      repoParameters += parse('+size%3A', size);
     }
 
-    return repoParams;
+    return repoParameters;
   }
 
-  function codeParams() {
-    let codeParams = '';
+  function codeParameters() {
+    let codeParameters = '';
     let extension = document.getElementById("extension").value;
     let size = document.getElementById("code_size").value;
     let path = document.getElementById("path").value;
     let filename = document.getElementById("filename").value;
 
     if (!(isEmpty(extension))) {
-      codeParams += parse('+extension%3A', extension);
+      codeParameters += parse('+extension%3A', extension);
     }
     if (!(isEmpty(size))) {
-      codeParams += parse('+size%3A', extension);
+      codeParameters += parse('+size%3A', size);
     }
     if (!(isEmpty(path))) {
-      codeParams += parse('+path%3A', extension);
+      codeParameters += parse('+path%3A', path);
     }
     if (!(isEmpty(filename))) {
-      codeParams += parse('+filename%3A', extension);
+      codeParameters += parse('+filename%3A', filename);
     }
 
-    return codeParams;
+    return codeParameters;
   }
 
-  function issueParams() {
-    let issueParams = '';
+  function issueParameters() {
+    let issueParameters = '';
     let comments = document.getElementById("commments").value;
     let label = document.getElementById("label").value;
     let author = document.getElementById("author").value;
@@ -118,22 +118,45 @@
     let assignee = document.getElementById("assignee").value;
 
     if (!(isEmpty(comments))) {
-      issueParams += parse('+comments%3A', extension);
+      issueParameters += parse('+comments%3A', comments);
     }
     if (!(isEmpty(label))) {
-      issueParams += parse('+label%3A', extension);
+      issueParameters += parse('+label%3A', label);
     }
     if (!(isEmpty(author))) {
-      issueParams += parse('+author%3A', extension);
+      issueParameters += parse('+author%3A', author);
     }
     if (!(isEmpty(mentions))) {
-      issueParams += parse('+mentions%3A', extension);
+      issueParameters += parse('+mentions%3A', mentions);
     }
     if (!(isEmpty(assignee))) {
-      issueParams += parse('+assignee%3A', extension);
+      issueParameters += parse('+assignee%3A', assignee);
     }
 
-    return issueParams;
+    return issueParameters;
+  }
+
+  function userParameters() {
+    let userParameters = '';
+    let fullname = document.getElementById("fullname").value;
+    let location = document.getElementById("location").value;
+    let followers = document.getElementById("followers").value;
+    let public_repos = document.getElementById("repos").value;
+
+    if (!(isEmpty(fullname))) {
+      userParameters += parse('+fullname%3A', fullname);
+    }
+    if (!(isEmpty(location))) {
+      userParameters += parse('+location%3A', location);
+    }
+    if (!(isEmpty(followers))) {
+      userParameters += parse('+followers%3A', followers);
+    }
+    if (!(isEmpty(public_repos))) {
+      userParameters += parse('+repos%3A', public_repos);
+    }
+
+    return userParameters;
   }
 
   function isEmpty(str) {
