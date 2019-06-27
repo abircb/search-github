@@ -54,34 +54,6 @@
     return param;
   }
 
-  function displaySearchHistory() {
-    if (localStorage["previousSearches"]) {
-      previousSearches = JSON.parse(localStorage["previousSearches"]);
-    } else {
-      previousSearches = ['octokit/rest.js', 'atom', 'search-github-crx', 'antirez/redis', 'electron'];
-    }
-
-    $("#searchKey").autocomplete({
-      source: function(request, response) {
-        var results = $.ui.autocomplete.filter(previousSearches, request.term);
-        response(results.slice(0, 5));
-      },
-      messages: {
-        noResults: ''
-      }
-    });
-  }
-
-  function storeSearches(search) {
-    if (previousSearches.indexOf(search) == -1) {
-      previousSearches.unshift(search);
-      if (previousSearches.length > 100) {
-        previousSearches.pop();
-      }
-      localStorage["previousSearches"] = JSON.stringify(previousSearches);
-    }
-  }
-
   function repoParams() {
     let repoParams = '';
     let users = document.getElementById("user").value;
@@ -186,5 +158,33 @@
       return '+state%3Aclosed'
     } else {
       return '';
+    }
+  }
+
+  function displaySearchHistory() {
+    if (localStorage["previousSearches"]) {
+      previousSearches = JSON.parse(localStorage["previousSearches"]);
+    } else {
+      previousSearches = ['octokit/rest.js', 'atom', 'search-github-crx', 'antirez/redis', 'electron'];
+    }
+
+    $("#searchKey").autocomplete({
+      source: function(request, response) {
+        var results = $.ui.autocomplete.filter(previousSearches, request.term);
+        response(results.slice(0, 5));
+      },
+      messages: {
+        noResults: ''
+      }
+    });
+  }
+
+  function storeSearches(search) {
+    if (previousSearches.indexOf(search) == -1) {
+      previousSearches.unshift(search);
+      if (previousSearches.length > 100) {
+        previousSearches.pop();
+      }
+      localStorage["previousSearches"] = JSON.stringify(previousSearches);
     }
   }
