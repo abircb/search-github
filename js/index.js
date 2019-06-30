@@ -31,7 +31,7 @@
     });
   }
 
-  function advancedSearch() {
+  function advancedSearch(){
     let searchKey = document.getElementById("advanced_search").value;
     let searchType = document.getElementById("search_type").value
 
