@@ -9,7 +9,7 @@
     "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;Use Advanced for constructing powerful search queries",
     "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;52% of the Fortune 50 companies use Github Enterprise to develop software",
     "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;Search GitHub is an Open Source project, created with ❤️  Check it out <a href=\"https://github.com/abircb/search-github-crx\">here</a>",
-    "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;On March 2017, Github broke the record and become the world&apos;s biggest Open Source host of all time",
+    "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;On March 2017, Github became the biggest Open Source host of all time",
     "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;Github has over 800 employees, of which 65% are remote",
     "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;Github Desktop makes life easy",
     "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;GitHub&apos;s mascot is a female cat with 5 octopus-like arms. It was created by Simon Oxley, who also designed Twitter&apos;s bird",
