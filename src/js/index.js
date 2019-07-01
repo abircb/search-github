@@ -8,7 +8,7 @@
   var tips = [
     "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;Use Advanced for constructing powerful search queries",
     "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;52% of the Fortune 50 companies use Github Enterprise to develop software",
-    "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;Search GitHub is an Open Source project, created with ❤️  Check it out <a href=\"https://github.com/abircb/search-github-crx\">here</a>",
+    "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;Search GitHub is an Open Source project, created with &#x2764; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Check it out <a href=\"https://github.com/abircb/search-github-crx\" target=\"_blank\">here</a>",
     "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;On March 2017, Github became the biggest Open Source host of all time",
     "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;Github has over 800 employees, of which 65% are remote",
     "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;Github Desktop makes life easy",
@@ -16,7 +16,7 @@
     "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;Open Source projects on GitHub are written in over 337 programming languages, of which JavaScript is most popular",
     "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;Sometimes emojis are worth a thousand words. The <i>thumbs up</i> emoji has been used more than 7.2 million times on Github",
     "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;GitHub was affected by DDOS attack in 2015, which lasted for around 5 days",
-    "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;Search GitHub is an Open Source project, created with ❤️  Check it out <a href=\"https://github.com/abircb/search-github-crx\">here</a>"
+    "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;Search GitHub is an Open Source project, created with &#x2764; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Check it out <a href=\"https://github.com/abircb/search-github-crx\" target=\"_blank\">here</a>"
   ];
 
   if (basicSearch_input) {
