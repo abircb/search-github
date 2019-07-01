@@ -1,3 +1,16 @@
 # Search GitHub
 
+<img src="/icons/icon16.png"> Search GitHub is a browser (action) extension built using [Chrome APIs](https://developers.chrome.com/extensions/api_index), for Chrome.  
+
+## Usage
+The extension is not yet available on the Chrome Web Store, but will be soon.
+
+__To run:__
+<ul>
+  <li>Open the Extension Management page by navigating to <code>chrome://extensions</code> (The Extension Management page can also be opened by clicking on the Chrome menu, hovering over More Tools then selecting Extensions)</li>
+  <li>Enable Developer Mode by clicking the toggle switch next to Developer mode</li>
+  <li>Click the LOAD UNPACKED button and select the cloned Search GitHub repository</li>
+  <li>Happy GitHub Searching!</li>
+</ul>
+
 Icons  made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a>, licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">Creative Commons BY 3.0</a>
