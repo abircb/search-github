@@ -1,9 +1,23 @@
   $(document).ready(function() {
     displaySearchHistory();
+    displayTip();
   });
 
   var previousSearches = [];
   var basicSearch_input = document.getElementById("searchKey");
+  var tips = [
+    "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;Use Advanced for constructing powerful search queries",
+    "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;52% of the Fortune 50 companies use Github Enterprise to develop software",
+    "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;Search GitHub is an Open Source project, created with ❤️  Check it out <a href=\"https://github.com/abircb/search-github-crx\">here</a>",
+    "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;On March 2017, Github broke the record and become the world&apos;s biggest Open Source host of all time",
+    "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;Github has over 800 employees, of which 65% are remote",
+    "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;Github Desktop makes life easy",
+    "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;GitHub&apos;s mascot is a female cat with 5 octopus-like arms. It was created by Simon Oxley, who also designed Twitter&apos;s bird",
+    "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;Open Source projects on GitHub are written in over 337 programming languages, of which JavaScript is most popular",
+    "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;Sometimes emojis are worth a thousand words. The <i>thumbs up</i> emoji has been used more than 7.2 million times on Github",
+    "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;GitHub was affected by DDOS attack in 2015, which lasted for around 5 days",
+    "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;Search GitHub is an Open Source project, created with ❤️  Check it out <a href=\"https://github.com/abircb/search-github-crx\">here</a>"
+  ];
 
   if (basicSearch_input) {
     basicSearch_input.addEventListener("keydown", function(e) {
@@ -243,5 +257,11 @@
     } else {
       return param + str;
     }
+  }
 
+  function displayTip() {
+    let min = 0;
+    let max = tips.length - 1;
+    let n = Math.floor(Math.random() * (+max - +min)) + +min;
+    document.getElementById("tip").innerHTML = tips[n];
   }
