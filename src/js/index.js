@@ -4,7 +4,6 @@
   });
 
   var previousSearches = [];
-  var basicSearch_input = document.getElementById("searchKey");
   var tips = [
     "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;Use Advanced for constructing powerful search queries",
     "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;52% of the Fortune 50 companies use Github Enterprise to develop software",
@@ -21,11 +20,19 @@
     "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;Search GitHub is an Open Source project, created with &#x2764; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Check it out <a href=\"https://github.com/abircb/search-github-crx\" target=\"_blank\">here</a>"
   ];
 
+  var basicSearch_input = document.getElementById("searchKey");
   if (basicSearch_input) {
     basicSearch_input.addEventListener("keydown", function(e) {
       if (e.keyCode === 13) {
         basicSearch(e);
       }
+    });
+  }
+
+  var searchBtn = document.getElementById("advanced_btn");
+  if (searchBtn) {
+    searchBtn.addEventListener('click', function() {
+      advancedSearch();
     });
   }
 
@@ -38,13 +45,6 @@
       "url": searchURL
     };
     chrome.tabs.create(createProperties, function() {});
-  }
-
-  var searchBtn = document.getElementById("advanced_btn");
-  if (searchBtn) {
-    searchBtn.addEventListener('click', function() {
-      advancedSearch();
-    });
   }
 
   function advancedSearch() {
@@ -62,8 +62,8 @@
     }
 
     let searchParameters = getParameters();
-    let fokeOptions = getForkOptions();
-    let searchURL = 'https://github.com/search?utf8=%E2%9C%93&q=' + searchKey + searchParameters + fokeOptions + '&type=' + searchType + '&ref=advsearch&l=&l=';
+    let forkOptions = getForkOptions();
+    let searchURL = 'https://github.com/search?utf8=%E2%9C%93&q=' + searchKey + searchParameters + forkOptions + '&type=' + searchType + '&ref=advsearch&l=&l=';
     let createProperties = {
       "url": searchURL
     };
@@ -224,7 +224,6 @@
     } else {
       previousSearches = ['octokit/rest.js', 'atom', 'search-github-crx', 'antirez/redis', 'electron'];
     }
-
     $("#searchKey").autocomplete({
       source: function(request, response) {
         var results = $.ui.autocomplete.filter(previousSearches, request.term);
