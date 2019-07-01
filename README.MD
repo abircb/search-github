@@ -1,6 +1,6 @@
 # Search GitHub
 
-<img src="/icons/icon16.png"> Search GitHub is a browser (action) extension built using [Chrome APIs](https://developers.chrome.com/extensions/api_index), for Chrome.  
+<img src="/src/icons/icon16.png"> Search GitHub is a browser (action) extension built using [Chrome APIs](https://developers.chrome.com/extensions/api_index), for Chrome.  
 
 ## Usage
 The extension is not yet available on the Chrome Web Store, but will be soon.
