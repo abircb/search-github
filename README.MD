@@ -1,8 +1,21 @@
 # Search GitHub
 
-<img src="/src/icons/icon16.png"> Search GitHub is a browser (action) extension built using [Chrome APIs](https://developers.chrome.com/extensions/api_index), for Chrome. It has two types of searches: a quick, one-click text-based search, and an Advanced Search option that can be used to construct powerful search queries using 24 different parameters.
+<img src="/src/icons/icon16.png"> Search GitHub is a browser-action DevTool extension that enables a lightning-fast text-based search from your very own Chrome Menu. 
 
+It has two types of searches:
+
+<ol>
+  <li>A quick, one-click, text-based search</li>
+  <br>
+  
 ![screenshot](/screenshot.png)
+
+  <li>An Advanced Search option that can be used to construct powerful search queries using 24 different parameters. </li>
+  <br>
+
+![demo](/demo.gif)
+
+</ol>
 
 ## Usage
 The extension is not yet available on the Chrome Web Store, but will be soon.
