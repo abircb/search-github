@@ -2,6 +2,7 @@
 
 <img src="/src/icons/icon16.png"> Search GitHub is a browser (action) extension built using [Chrome APIs](https://developers.chrome.com/extensions/api_index), for Chrome.  
 
+![screenshot](/screenshot.png)
 ## Usage
 The extension is not yet available on the Chrome Web Store, but will be soon.
 
