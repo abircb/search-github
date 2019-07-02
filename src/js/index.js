@@ -13,7 +13,7 @@
     "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;Github Desktop makes life easy",
     "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;Let&apos;s say you&apos;re creating a pull request that fixes issue #1337. Then, entering the text &#34;fixes #1337&#34; in the description of your PR automagically closes that issue. Neat.",
     "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;GitHub&apos;s mascot is a female cat with 5 octopus-like arms. It was created by Simon Oxley, who also designed Twitter&apos;s bird",
-    "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;GitHub has users from over 200 countries",
+    "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;GitHub has users in over 200 countries",
     "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;Open Source projects on GitHub are written in over 337 programming languages, of which JavaScript is most popular",
     "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;Sometimes emojis are worth a thousand words. The <i>thumbs up</i> emoji has been used more than 7.2 million times on Github",
     "<i class=\"fab fa-github-alt fa-lg\"></i>&nbsp;On February 28, 2018, GitHub fell victim to the second largest DDoS attack in history, with incoming traffic reaching a peak of about 1.35 terabits per second",
