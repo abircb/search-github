@@ -18,7 +18,7 @@ It has two types of searches:
 </ol>
 
 ## Usage
-The extension is not yet available on the Chrome Web Store, but will be soon.
+The extension is available on the Chrome Web Store. Check it out [here](https://chrome.google.com/webstore/detail/search-github/fbdfmneommmclhkndkhdagkcebgekkna). You can also directly clone the GitHub repository and add any new features- I am very open to new ideas!
 
 __To run:__
 <ul>
