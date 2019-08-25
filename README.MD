@@ -1,3 +1,7 @@
+![Chrome Web Store](https://img.shields.io/chrome-web-store/v/fbdfmneommmclhkndkhdagkcebgekkna)
+![Chrome Web Store](https://img.shields.io/chrome-web-store/users/fbdfmneommmclhkndkhdagkcebgekkna)
+![GitHub repo size](https://img.shields.io/github/repo-size/abircb/search-github)
+![LICENSE](https://img.shields.io/github/license/abircb/search-github)
 # Search GitHub
 
 <img src="/src/icons/icon16.png"> Search GitHub is a browser-action DevTool extension that enables a lightning-fast text-based search from your very own Chrome Menu. 
