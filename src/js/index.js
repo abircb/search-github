@@ -10,6 +10,7 @@ $(document).ready(function() {
 var previousSearches = [];
 
 var basicSearch_input = document.getElementById("searchKey");
+basicSearch_input.focus();
 if (basicSearch_input) {
   basicSearch_input.addEventListener("keydown", function(e) {
     if (e.keyCode === 13) {
