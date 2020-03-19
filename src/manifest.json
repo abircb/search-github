@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Search GitHub",
   "description": "A must-have DevTool that searches GitHub from your very own Chrome menu",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "icons": {
     "128": "icons/icon128.png",
     "48": "icons/icon48.png",
