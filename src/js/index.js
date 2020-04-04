@@ -2,12 +2,19 @@ import {
   displayFact
 } from './static/facts.js'
 
+
 $(document).ready(function() {
   displaySearchHistory();
   displayFact();
 });
 
+/*
+1.0.4
+Issue - https://github.com/abircb/search-github/issues?q=is%3Aissue+is%3Aclosed
+PR    - https://github.com/abircb/search-github/pull/2
+*/
 $('#searchKey').focus();
+
 
 var previousSearches = [];
 var basicSearch_input = document.getElementById("searchKey");
