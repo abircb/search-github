@@ -29,17 +29,25 @@ if (searchBtn) {
   })
 }
 
+/**
+ * A basic text-based search option to search all of GitHub
+ * @param {String} e
+ */
 function basicSearch(e) {
   let searchKey = document.getElementById('searchKey').value
   storeSearches(searchKey)
   searchKey = searchKey.toString().trim()
-  let searchURL = 'https://github.com/search?q=' + searchKey
-  let createProperties = {
-    url: searchURL,
+  let searchProperties = {
+    url: 'https://github.com/search?q=' + searchKey,
   }
-  chrome.tabs.create(createProperties, function () {})
+  chrome.tabs.create(searchProperties, () => {
+    console.log('basic search successful')
+  })
 }
 
+/**
+ * A very advanced search using parameters
+ */
 function advancedSearch() {
   let searchKey = document.getElementById('advanced_search').value
   let searchType = document.getElementById('search_type').value
@@ -64,20 +72,26 @@ function advancedSearch() {
     '&type=' +
     searchType +
     '&ref=advsearch&l=&l='
-  let createProperties = {
+  let searchProperties = {
     url: searchURL,
   }
-  chrome.tabs.create(createProperties, function () {})
+  chrome.tabs.create(searchProperties, () => {
+    console.log('advanced search successful')
+  })
 }
 
+/**
+ * Collects all (repo, code, issue, user, wiki) parameters
+ * @returns {String} a complete list of all parameters
+ */
 function getParameters() {
-  let param = ''
-  param +=
-    repoParameters() +
-    codeParameters() +
-    issueParameters() +
-    userParameters() +
+  let param = ''.concat(
+    repoParameters(),
+    codeParameters(),
+    issueParameters(),
+    userParameters(),
     wikiParameter()
+  )
   return param
 }
 
