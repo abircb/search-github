@@ -1,4 +1,4 @@
-import { displayFact } from './static/facts.js'
+import {displayFact} from './static/facts.js'
 
 $(document).ready(function () {
   displaySearchHistory()
@@ -58,7 +58,7 @@ function advancedSearch() {
     searchKey = ''
   }
 
-  if (searchType == 'Packages') {
+  if (searchType === 'Packages') {
     searchType = 'RegistryPackages'
   }
 
@@ -207,7 +207,7 @@ function wikiParameter() {
 }
 
 function isEmpty(str) {
-  return str == null || str.toString().trim().length == 0
+  return str === null || str.toString().trim().length === 0
 }
 
 function getForkOptions() {
@@ -217,9 +217,9 @@ function getForkOptions() {
 }
 
 function filterForkOption(str) {
-  if (str == 'Yes') {
+  if (str === 'Yes') {
     return '+fork%3Atrue'
-  } else if (str == 'Only including forks') {
+  } else if (str === 'Only including forks') {
     return '+fork%3Aonly'
   } else {
     return ''
@@ -227,9 +227,9 @@ function filterForkOption(str) {
 }
 
 function filterState(str) {
-  if (str == 'open') {
+  if (str === 'open') {
     return '+state%3Aopen'
-  } else if (str == 'closed') {
+  } else if (str === 'closed') {
     return '+state%3Aclosed'
   } else {
     return ''
@@ -260,7 +260,7 @@ function displaySearchHistory() {
 }
 
 function storeSearches(search) {
-  if (previousSearches.indexOf(search) == -1) {
+  if (previousSearches.indexOf(search) === -1) {
     previousSearches.unshift(search)
     if (previousSearches.length > 100) {
       previousSearches.pop()
