@@ -212,9 +212,8 @@ function isEmpty(str) {
 
 function getForkOptions() {
   let repo_fork = filterForkOption(document.getElementById('repo_fork').value)
-  let code_fork = filterForkOption(document.getElementById('code_fork').value)
   let state = filterState(document.getElementById('state').value)
-  return repo_fork + code_fork + state
+  return repo_fork + state
 }
 
 function filterForkOption(str) {

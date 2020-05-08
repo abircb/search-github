@@ -1,10 +1,17 @@
-  <!DOCTYPE html>
-
+<html>
   <head>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -12,8 +19,9 @@
       <a href="/index.html"><i class="fas fa-arrow-left fa-2x"></i></a>
     </div>
     <div class="advanced-search-area">
-      <br><br>
-      <h2>Advanced Search <br><br>
+      <br /><br />
+      <h2>
+        Advanced Search <br /><br />
         <form autocomplete="off">
           <input id="advanced_search" value="" type="text" placeholder="" />
           &nbsp &nbsp
@@ -21,6 +29,7 @@
         </form>
       </h2>
     </div>
+
     <div class="table">
       <table>
         <tbody>
@@ -41,46 +50,6 @@
             </td>
           </tr>
           <tr>
-            <td>From these owners</td>
-            <td>
-              <form autocomplete="off">
-                <input id="user" value="" type="text" placeholder="github, atom, electron, octokit" />
-              </form>
-            </td>
-          </tr>
-          <tr>
-            <td>In these repositories</td>
-            <td>
-              <form autocomplete="off">
-                <input id="repo" value="" type="text" placeholder="twbs/bootsrap, rails/rails" />
-              </form>
-            </td>
-          </tr>
-          <tr>
-            <td>With this many stars</td>
-            <td>
-              <form autocomplete="off">
-                <input id="stars" value="" type="text" placeholder="0..100, 200, >1000" />
-              </form>
-            </td>
-          </tr>
-          <tr>
-            <td>With this many forks</td>
-            <td>
-              <form autocomplete="off">
-                <input id="forks" value="" type="text" placeholder="50..100, 200, <5" />
-              </form>
-            </td>
-          </tr>
-          <tr>
-            <td>Of this size</td>
-            <td>
-              <form autocomplete="off">
-                <input id="repo_size" value="" type="text" placeholder="Repository size in KB" />
-              </form>
-            </td>
-          </tr>
-          <tr>
             <td>Return repositories including forks</td>
             <td>
               <select id="repo_fork">
@@ -93,11 +62,74 @@
         </tbody>
       </table>
     </div>
-    <br>
+    
     <div class="advanced-search-area">
-      <br>
-      <h2>Code options<br>
-      </h2>
+      <br />
+      <h2>Repository options<br /></h2>
+    </div>
+    <div class="table">
+      <table>
+        <tbody>
+          <tr>
+            <td>From these owners</td>
+            <td>
+              <form autocomplete="off">
+                <input
+                  id="user"
+                  value=""
+                  type="text"
+                  placeholder="github, atom, electron, octokit"
+                />
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>With this many stars</td>
+            <td>
+              <form autocomplete="off">
+                <input
+                  id="stars"
+                  value=""
+                  type="text"
+                  placeholder="0..100, 200, >1000"
+                />
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>With this many forks</td>
+            <td>
+              <form autocomplete="off">
+                <input
+                  id="forks"
+                  value=""
+                  type="text"
+                  placeholder="50..100, 200, <5"
+                />
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>Of this size</td>
+            <td>
+              <form autocomplete="off">
+                <input
+                  id="repo_size"
+                  value=""
+                  type="text"
+                  placeholder="Repository size in KB"
+                />
+              </form>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+
+    <div class="advanced-search-area">
+      <br />
+      <h2>Code options<br /></h2>
     </div>
     <div class="table">
       <table>
@@ -106,7 +138,12 @@
             <td>With this extension</td>
             <td>
               <form autocomplete="off">
-                <input id="extension" value="" type="text" placeholder="rb, py, jpg" />
+                <input
+                  id="extension"
+                  value=""
+                  type="text"
+                  placeholder="rb, py, jpg"
+                />
               </form>
             </td>
           </tr>
@@ -114,7 +151,25 @@
             <td>Of this file size</td>
             <td>
               <form autocomplete="off">
-                <input id="code_size" value="" type="text" placeholder="100..8000, >10000" />
+                <input
+                  id="code_size"
+                  value=""
+                  type="text"
+                  placeholder="100..8000, >10000"
+                />
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>In these repositories</td>
+            <td>
+              <form autocomplete="off">
+                <input
+                  id="repo"
+                  value=""
+                  type="text"
+                  placeholder="twbs/bootsrap, rails/rails"
+                />
               </form>
             </td>
           </tr>
@@ -122,7 +177,12 @@
             <td>In this path</td>
             <td>
               <form autocomplete="off">
-                <input id="path" value="" type="text" placeholder="/foo/bar/baz/qux" />
+                <input
+                  id="path"
+                  value=""
+                  type="text"
+                  placeholder="/foo/bar/baz/qux"
+                />
               </form>
             </td>
           </tr>
@@ -130,27 +190,21 @@
             <td>With this file name</td>
             <td>
               <form autocomplete="off">
-                <input id="filename" value="" type="text" placeholder="app.rb, footer.erb" />
+                <input
+                  id="filename"
+                  value=""
+                  type="text"
+                  placeholder="app.rb, footer.erb"
+                />
               </form>
-            </td>
-          </tr>
-          <tr>
-            <td>Return repositories including forks</td>
-            <td>
-              <select id="code_fork">
-                <option selected>No</option>
-                <option>Yes</option>
-                <option>Only including forks</option>
-              </select>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
     <div class="advanced-search-area">
-      <br><br>
-      <h2>Issues options<br>
-      </h2>
+      <br /><br />
+      <h2>Issues options<br /></h2>
     </div>
     <div class="table">
       <table>
@@ -169,7 +223,12 @@
             <td>With this many commments</td>
             <td>
               <form autocomplete="off">
-                <input id="commments" value="" type="text" placeholder="0..100, >442" />
+                <input
+                  id="commments"
+                  value=""
+                  type="text"
+                  placeholder="0..100, >442"
+                />
               </form>
             </td>
           </tr>
@@ -185,7 +244,12 @@
             <td>Opened by the author</td>
             <td>
               <form autocomplete="off">
-                <input id="author" value="" type="text" placeholder="hubot, octocat" />
+                <input
+                  id="author"
+                  value=""
+                  type="text"
+                  placeholder="hubot, octocat"
+                />
               </form>
             </td>
           </tr>
@@ -193,7 +257,12 @@
             <td>Mentioning the users</td>
             <td>
               <form autocomplete="off">
-                <input id="mentions" value="" type="text" placeholder="abircb, tpope, mattt" />
+                <input
+                  id="mentions"
+                  value=""
+                  type="text"
+                  placeholder="abircb, tpope, mattt"
+                />
               </form>
             </td>
           </tr>
@@ -201,7 +270,12 @@
             <td>Assigned to the users</td>
             <td>
               <form autocomplete="off">
-                <input id="assignee" value="" type="text" placeholder="abircb, twp, jim" />
+                <input
+                  id="assignee"
+                  value=""
+                  type="text"
+                  placeholder="abircb, twp, jim"
+                />
               </form>
             </td>
           </tr>
@@ -209,9 +283,8 @@
       </table>
     </div>
     <div class="advanced-search-area">
-      <br><br>
-      <h2>Users options<br>
-      </h2>
+      <br /><br />
+      <h2>Users options<br /></h2>
     </div>
     <div class="table">
       <table>
@@ -220,7 +293,12 @@
             <td>With this full name</td>
             <td>
               <form autocomplete="off">
-                <input id="fullname" value="" type="text" placeholder="Grace Hopper" />
+                <input
+                  id="fullname"
+                  value=""
+                  type="text"
+                  placeholder="Grace Hopper"
+                />
               </form>
             </td>
           </tr>
@@ -228,7 +306,12 @@
             <td>From this location</td>
             <td>
               <form autocomplete="off">
-                <input id="location" value="" type="text" placeholder="London, San Fransisco" />
+                <input
+                  id="location"
+                  value=""
+                  type="text"
+                  placeholder="London, San Fransisco"
+                />
               </form>
             </td>
           </tr>
@@ -236,7 +319,12 @@
             <td>With this many followers</td>
             <td>
               <form autocomplete="off">
-                <input id="followers" value="" type="text" placeholder="20..50, >200, <2" />
+                <input
+                  id="followers"
+                  value=""
+                  type="text"
+                  placeholder="20..50, >200, <2"
+                />
               </form>
             </td>
           </tr>
@@ -244,7 +332,12 @@
             <td>With this many public repositories</td>
             <td>
               <form autocomplete="off">
-                <input id="repos" value="" type="text" placeholder="0, <42, >5" />
+                <input
+                  id="repos"
+                  value=""
+                  type="text"
+                  placeholder="0, <42, >5"
+                />
               </form>
             </td>
           </tr>
@@ -252,9 +345,8 @@
       </table>
     </div>
     <div class="advanced-search-area">
-      <br><br>
-      <h2>Wiki options<br>
-      </h2>
+      <br /><br />
+      <h2>Wiki options<br /></h2>
     </div>
     <div class="table">
       <table>
@@ -263,15 +355,19 @@
             <td>Updated before the date</td>
             <td>
               <form autocomplete="off">
-                <input id="updated" value="" type="text" placeholder="<YYYY-MM-DD" />
+                <input
+                  id="updated"
+                  value=""
+                  type="text"
+                  placeholder="<YYYY-MM-DD"
+                />
               </form>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
-    <br><br>
+    <br /><br />
   </body>
   <script type="module" src="/js/index.js"></script>
-
-  </html>
+</html>
