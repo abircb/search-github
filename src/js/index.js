@@ -1,4 +1,4 @@
-import {displayFact} from './static/facts.js'
+import { displayFact } from './static/facts.js'
 
 $(document).ready(function () {
   displaySearchHistory()
